@@ -10,7 +10,7 @@ class aptrepo::gluster (
 ){
   include ::apt
   ::apt::source { 'gluster':
-    location          => 'http://download.gluster.org/pub/gluster/glusterfs/3.4/3.4.5/Debian/wheezy/apt',
+    location          => "http://download.gluster.org/pub/gluster/glusterfs/3.4/3.4.5/Debian/${::lsbdistcodename}/apt",
     release           => $::lsbdistcodename,
     architecture      => 'amd64',
     repos             => 'main',
