@@ -34,7 +34,7 @@ class aptrepo::ubuntu (
     include           => { src => true },
   }
   ::apt::source { 'ubuntu-zabbix':
-    location          => 'http://repo.zabbix.com/zabbix/2.2/ubuntu',
+    location          => 'http://repo.zabbix.com/zabbix/3.2/ubuntu',
     release           => $::lsbdistcodename,
     repos             => 'main',
     include           => { src => true },

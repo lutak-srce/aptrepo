@@ -1,11 +1,3 @@
-# Class: aptrepo::ossec
-#
-# This module manages OSSEC repo
-#
-# Sample Usage:
-#   include aptrepo::ossec
-#
-
 class aptrepo::cix (
 ){
   include ::apt

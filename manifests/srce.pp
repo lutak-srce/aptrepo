@@ -12,7 +12,7 @@ class aptrepo::srce (){
     location          => 'http://ftp.srce.hr/srce-debian/',
     release           => "srce-${::lsbdistcodename}",
     repos             => 'main mon',
-    key               => { 'id' => 'E2FFF7957AEC9D5118B95BE2FECB42104089CBA3', 'server' => 'pks.aaiedu.hr', },
+    key               => { 'id' => 'E2FFF7957AEC9D5118B95BE2FECB42104089CBA3', 'server' => 'hkp.srce.hr', },
     include           => { src => true },
   }
   package { 'srce-keyring': ensure => present, }

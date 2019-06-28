@@ -5,7 +5,9 @@
 class aptrepo {
 
   # Configure repos prior to installing packages
-  Apt::Source <| |> -> Package <| |>
+  unless $facts['os']['distro']['release']['major'] == '9' {
+    Apt::Source <| |> -> Package <| |>
+  }
 
   case $::operatingsystem {
    'debian': { package { 'debian-keyring': ensure => present, } }

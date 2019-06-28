@@ -14,7 +14,7 @@ class aptrepo::mozilla (
     release           => "${::lsbdistcodename}-backports",
     architecture      => 'amd64',
     repos             => 'firefox-release',
-    key               => { 'id' => '85F06FBC75E067C3F305C3C985A3D26506C4AE2A', 'server' => 'pks.aaiedu.hr', },
+    key               => { 'id' => '85F06FBC75E067C3F305C3C985A3D26506C4AE2A', 'server' => 'pgp.mit.edu', },
     include           => { src => true },
   }
 }

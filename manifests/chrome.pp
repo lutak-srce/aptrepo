@@ -14,7 +14,7 @@ class aptrepo::chrome (
     release           => "stable",
     architecture      => 'amd64',
     repos             => 'main',
-    key               => { 'id' => '4CCA1EAF950CEE4AB83976DCA040830F7FAC5991', 'server' => 'pks.aaiedu.hr', },
+    key               => { 'id' => '4CCA1EAF950CEE4AB83976DCA040830F7FAC5991', 'server' => 'pgp.mit.edu', },
     include           => { src => false },
   }
 }

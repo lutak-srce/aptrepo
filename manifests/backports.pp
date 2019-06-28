@@ -1,11 +1,3 @@
-# Class: aptrepo::backports
-#
-# This module manages Debian Backports repo
-#
-# Sample Usage:
-#   include aptrepo::backports
-#
-
 class aptrepo::backports (
 ){
   case $::lsbdistcodename {
@@ -25,7 +17,7 @@ class aptrepo::backports (
     location          => $debian_location,
     release           => "${::lsbdistcodename}-backports",
     repos             => 'main contrib non-free',
-    key               => { 'id' => '20691DFCC2C98C47952984EE00018C22381A7594', 'server' => 'pks.aaiedu.hr', },
+    key               => { 'id' => '20691DFCC2C98C47952984EE00018C22381A7594', 'server' => 'pgp.mit.edu', },
     include           => { 'src' => true },
   }
 }
