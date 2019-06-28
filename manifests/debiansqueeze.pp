@@ -10,10 +10,10 @@ class aptrepo::debiansqueeze (
 ){
   include ::apt
   ::apt::source { 'debian':
-    location          => 'http://archive.debian.org/debian/',
-    release           => $::lsbdistcodename,
-    repos             => 'main contrib non-free',
-    key               => { 'id' => '20691DFCC2C98C47952984EE00018C22381A7594', 'server' => 'pks.aaiedu.hr', },
-    include           => { 'src' => true },
+    location => 'http://archive.debian.org/debian/',
+    release  => $::lsbdistcodename,
+    repos    => 'main contrib non-free',
+    key      => { 'id' => '20691DFCC2C98C47952984EE00018C22381A7594', 'server' => 'pgp.mit.edu', },
+    include  => { 'src' => true },
   }
 }
