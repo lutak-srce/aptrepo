@@ -12,7 +12,7 @@ class aptrepo {
   case $::operatingsystem {
     'debian': { package { 'debian-keyring': ensure => present, } }
     'ubuntu': { }
-     default:  { }
+    default:  { }
   }
 
 }
