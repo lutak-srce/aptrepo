@@ -14,7 +14,7 @@ class aptrepo::mysql (
   ::apt::source { 'mysql':
     location => 'http://repo.mysql.com/apt/debian/',
     release  => $::lsbdistcodename,
-    repos    => 'mysql-apt-config mysql-5.6 mysql-tools',
+    repos    => 'mysql-apt-config mysql-5.7 mysql-tools',
     pin      => '600',
     include  => { src => false },
   }
