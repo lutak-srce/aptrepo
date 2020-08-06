@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::updates
 #
 # This module manages Debian Updates repo
@@ -6,8 +7,7 @@
 #   include aptrepo::updates
 #
 
-class aptrepo::updates (
-){
+class aptrepo::updates (){
   include ::apt
   ::apt::source { 'updates':
     location => 'http://ftp.hr.debian.org/debian/',

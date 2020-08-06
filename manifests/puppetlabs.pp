@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::puppetlabs
 #
 # This module manages Puppetlabs repo
@@ -6,8 +7,7 @@
 #   include aptrepo::puppetlabs
 #
 
-class aptrepo::puppetlabs (
-){
+class aptrepo::puppetlabs (){
   include ::apt
   ::apt::source { 'puppetlabs':
     location => 'http://apt.puppetlabs.com/',

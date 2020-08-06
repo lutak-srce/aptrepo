@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::debian
 #
 # This module manages Debian repo
@@ -6,8 +7,7 @@
 #   include aptrepo::debian
 #
 
-class aptrepo::debian (
-){
+class aptrepo::debian (){
   include ::apt
   ::apt::source { 'debian':
     location => 'http://ftp.hr.debian.org/debian/',

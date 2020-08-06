@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::gluster
 #
 # This module manages GlusterFS repo
@@ -6,8 +7,7 @@
 #   include aptrepo::gluster
 #
 
-class aptrepo::gluster (
-){
+class aptrepo::gluster (){
   include ::apt
   ::apt::source { 'gluster':
     location     => "http://download.gluster.org/pub/gluster/glusterfs/3.4/3.4.5/Debian/${::lsbdistcodename}/apt",

@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::security
 #
 # This module manages Debian Security repo
@@ -6,8 +7,7 @@
 #   include aptrepo::security
 #
 
-class aptrepo::security (
-){
+class aptrepo::security (){
   include ::apt
   ::apt::source { 'security':
     location => 'http://security.debian.org/',

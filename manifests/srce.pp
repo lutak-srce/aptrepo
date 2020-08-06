@@ -1,5 +1,5 @@
 #
-# = class: aptrepo::srce
+# Class: aptrepo::srce
 #
 # This module manages Srce Debian repo
 #
@@ -8,9 +8,7 @@
 #
 
 class aptrepo::srce (){
-
   include ::apt
-
   ::apt::source { 'srce' :
     location => 'http://ftp.srce.hr/srce-debian/',
     release  => "srce-${::lsbdistcodename}",
@@ -18,5 +16,4 @@ class aptrepo::srce (){
     key      => { 'id' => 'E2FFF7957AEC9D5118B95BE2FECB42104089CBA3', 'server' => 'hkp.srce.hr', },
     include  => { src => true },
   }
-
 }
