@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::docker
 #
 # This module manages Docker repo
@@ -6,8 +7,7 @@
 #   include aptrepo::docker
 #
 
-class aptrepo::docker (
-){
+class aptrepo::docker (){
   include ::apt
   ::apt::source { 'docker':
     location => 'https://download.docker.com/linux/debian/',

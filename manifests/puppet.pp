@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::puppet
 #
 # This module manages Puppet 6 repo
@@ -6,8 +7,7 @@
 #   include aptrepo::puppet
 #
 
-class aptrepo::puppet (
-){
+class aptrepo::puppet (){
   include ::apt
   ::apt::source { 'puppet':
     location => 'http://apt.puppetlabs.com/',

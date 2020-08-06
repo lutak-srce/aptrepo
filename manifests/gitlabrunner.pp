@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::gitlabrunner
 #
 # This module manages Gitlab Runner repo
@@ -6,8 +7,7 @@
 #   include aptrepo::gitlabrunner
 #
 
-class aptrepo::gitlabrunner (
-){
+class aptrepo::gitlabrunner (){
   include ::apt
   ::apt::source { 'gitlabrunner':
     location     => 'https://packages.gitlab.com/runner/gitlab-runner/debian/',

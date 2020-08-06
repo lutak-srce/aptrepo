@@ -1,5 +1,13 @@
-class aptrepo::backports (
-){
+#
+# Class: aptrepo::backports
+#
+# This module manages Backports repo
+#
+# Sample Usage:
+#   include aptrepo::backports
+#
+
+class aptrepo::backports (){
   case $::lsbdistcodename {
     default: {
       $debian_location = 'http://ftp.hr.debian.org/debian/'
@@ -11,7 +19,6 @@ class aptrepo::backports (
       $debian_location = 'http://ftp.hr.debian.org/debian/'
     }
   }
-
   include ::apt
   ::apt::source { 'backports':
     location => $debian_location,

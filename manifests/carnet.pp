@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::carnet
 #
 # This module manages CARNet Debian repo
@@ -6,8 +7,7 @@
 #   include aptrepo::carnet
 #
 
-class aptrepo::carnet (
-){
+class aptrepo::carnet (){
   include ::apt
   ::apt::source { 'carnet':
     location => 'http://ftp.carnet.hr/carnet-debian/',
@@ -16,5 +16,4 @@ class aptrepo::carnet (
     key      => { 'id' => '0E1183A646FC9255D1B1966453FBD252EC72006A', 'server' => 'hkp.srce.hr', },
     include  => { 'src' => true },
   }
-  #package { 'carnet-keyring': ensure => present, }
 }

@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::sury
 #
 # This module manages Sury repo (other PHP versions)
@@ -6,8 +7,7 @@
 #   include aptrepo::sury
 #
 
-class aptrepo::sury (
-){
+class aptrepo::sury (){
   include ::apt
   ::apt::source { 'sury':
     location => 'https://packages.sury.org/php/',

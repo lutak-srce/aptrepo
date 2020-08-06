@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::alienvaultsecurity
 #
 # This module manages Alienvault repos
@@ -6,8 +7,7 @@
 #   include aptrepo::alienvaultsecurity
 #
 
-class aptrepo::emby (
-){
+class aptrepo::emby (){
   include ::apt
   ::apt::source { 'emby':
     location => "http://download.opensuse.org/repositories/home:/emby/Debian_${::lsbmajdistrelease}.0/",

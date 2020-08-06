@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::debianlts
 #
 # This module manages Debian repo
@@ -6,8 +7,7 @@
 #   include aptrepo::debianlts
 #
 
-class aptrepo::debianlts (
-){
+class aptrepo::debianlts (){
   include ::apt
   ::apt::source { 'debian-lts':
     location => 'http://ftp.hr.debian.org/debian/',

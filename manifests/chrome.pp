@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::chrome
 #
 # This module manages Chrome repo
@@ -6,8 +7,7 @@
 #   include aptrepo::chrome
 #
 
-class aptrepo::chrome (
-){
+class aptrepo::chrome (){
   include ::apt
   ::apt::source { 'chrome':
     location     => 'http://dl.google.com/linux/chrome/deb/',

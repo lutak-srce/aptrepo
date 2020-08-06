@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::mozilla
 #
 # This module manages Mozilla repo
@@ -6,8 +7,7 @@
 #   include aptrepo::mozilla
 #
 
-class aptrepo::mozilla (
-){
+class aptrepo::mozilla (){
   include ::apt
   ::apt::source { 'mozilla':
     location     => 'http://mozilla.debian.net/',

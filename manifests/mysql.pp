@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::mysql
 #
 # This module manages mysql repo
@@ -6,11 +7,8 @@
 #   include aptrepo::mysql
 #
 
-class aptrepo::mysql (
-){
-
+class aptrepo::mysql (){
   include ::apt
-
   ::apt::source { 'mysql':
     location => 'http://repo.mysql.com/apt/debian/',
     release  => $::lsbdistcodename,
@@ -18,5 +16,4 @@ class aptrepo::mysql (
     pin      => '600',
     include  => { src => false },
   }
-
 }

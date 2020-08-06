@@ -1,5 +1,13 @@
-class aptrepo::matomo (
-){
+#
+# class: aptrepo::matomo
+#
+# This module manages Matomo repo
+#
+# Sample Usage:
+#   include aptrepo::matomo
+#
+
+class aptrepo::matomo (){
   include ::apt
   ::apt::source { 'matomo':
     location => 'http://debian.matomo.org/',

@@ -1,3 +1,4 @@
+#
 # Class: aptrepo::cnint
 #
 # This module manages CARNet Debian internal repo
@@ -6,8 +7,7 @@
 #   include aptrepo::cnint
 #
 
-class aptrepo::cnint (
-){
+class aptrepo::cnint (){
   include ::apt
   ::apt::source { 'cnint':
     location => 'http://cnint.carnet.hr/cnint',
