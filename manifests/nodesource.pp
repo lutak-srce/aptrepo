@@ -17,6 +17,4 @@ class aptrepo::nodesource (){
     include  => { src => true },
   }
 
-  Class['apt::update'] -> Package <| provider == 'apt' |>
-
 }
