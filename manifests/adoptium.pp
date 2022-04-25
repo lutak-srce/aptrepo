@@ -1,16 +1,19 @@
 #
-# Class: aptrepo::adoptopenjdk
+# Class: aptrepo::adoptium
 #
-# This module manages AdoptOpenJDK repo
+# This module manages Adoptium repo
 #
 
-class aptrepo::adoptopenjdk (){
-  include ::apt
-  ::apt::source { 'adoptopenjdk' :
-    location => 'https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/',
+class aptrepo::adoptium {
+
+  include apt
+
+  apt::source { 'adoptium' :
+    location => 'https://packages.adoptium.net/artifactory/deb/',
     release  => $::lsbdistcodename,
     repos    => 'main',
-    key      => { 'id' => '8ED17AF5D7E675EB3EE3BCE98AC3B29174885C03', 'server' => 'hkp.srce.hr', },
+    key      => { 'id' => '3B04D753C9050D9A5D343F39843C48A565F8F04B', 'server' => 'hkp.srce.hr', },
     include  => { src => false },
   }
+
 }
