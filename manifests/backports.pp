@@ -10,13 +10,13 @@
 class aptrepo::backports (){
   case $::lsbdistcodename {
     default: {
-      $debian_location = 'http://ftp.debian.org/debian/'
+      $debian_location = 'http://ftp.hr.debian.org/debian/'
     }
     /squeeze/: {
       $debian_location = 'http://backports.debian.org/debian-backports/'
     }
     /wheezy/: {
-      $debian_location = 'http://ftp.debian.org/debian/'
+      $debian_location = 'http://ftp.hr.debian.org/debian/'
     }
   }
   include ::apt
