@@ -7,27 +7,12 @@
 #   include aptrepo::puppet
 #
 class aptrepo::puppet (){
-
-  include apt
-
-  case $::lsbdistcodename {
-    default: {
-      apt::source { 'puppet':
-        location => 'http://apt.puppetlabs.com/',
-        release  => $::lsbdistcodename,
-        repos    => 'puppet7',
-        key      => { 'id' => 'D6811ED3ADEEB8441AF5AA8F4528B6CD9E61EF26', 'server' => 'hkp.srce.hr', },
-        include  => { src => false },
-      }
-    }
-    /jammy/: {
-      apt::source { 'updates':
-        location => 'http://nova.clouds.archive.ubuntu.com/ubuntu/',
-        release  => "${::lsbdistcodename}-updates",
-        repos    => 'main restricted',
-        key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
-        include  => { 'src' => false },
-      }
-    }
+  include ::apt
+  ::apt::source { 'puppet':
+    location => 'http://apt.puppetlabs.com/',
+    release  => $::lsbdistcodename,
+    repos    => 'puppet7',
+    key      => { 'id' => 'D6811ED3ADEEB8441AF5AA8F4528B6CD9E61EF26', 'server' => 'hkp.srce.hr', },
+    include  => { src => false },
   }
 }
