@@ -14,9 +14,8 @@ class aptrepo::ubuntu (){
     location => 'http://nova.clouds.archive.ubuntu.com/ubuntu/',
     release  => $::lsbdistcodename,
     repos    => 'main restricted',
-    key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr', 'weak_ssl' => true },
-    include  => { 'src' => true },
-    
+    key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
+    include  => { 'src' => false },
   }
 
 }
