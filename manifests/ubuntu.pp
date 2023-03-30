@@ -16,6 +16,7 @@ class aptrepo::ubuntu (){
     repos    => 'main restricted',
     key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
     include  => { 'src' => true },
+    weak_ssl => true
   }
 
 }
