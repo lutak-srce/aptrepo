@@ -10,7 +10,7 @@
 class aptrepo::srce (){
   include ::apt
   ::apt::source { 'srce' :
-    location => 'http://ftp.srce.hr/srce-debian/',
+    location => 'http://ftp.srce.hr/srce-ubuntu/',
     release  => "srce-${::lsbdistcodename}",
     repos    => 'main mon',
     key      => { 'id' => 'E2FFF7957AEC9D5118B95BE2FECB42104089CBA3', 'server' => 'hkp.srce.hr', },
