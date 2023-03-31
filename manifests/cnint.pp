@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::cnint
 #
+class aptrepo::cnint {
 
-class aptrepo::cnint (){
-  include ::apt
-  ::apt::source { 'cnint':
+  include apt
+
+  apt::source { 'cnint':
     location => 'http://cnint.carnet.hr/cnint',
     release  => "carnet-${::lsbdistcodename}",
     repos    => 'main',

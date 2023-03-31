@@ -6,12 +6,13 @@
 # Sample Usage:
 #   include aptrepo::mysql
 #
-
 class aptrepo::mysql (
   $version = '5.7',
 ){
-  include ::apt
-  ::apt::source { 'mysql':
+
+  include apt
+
+  apt::source { 'mysql':
     location => 'http://repo.mysql.com/apt/debian/',
     release  => $::lsbdistcodename,
     repos    => "mysql-apt-config mysql-${version} mysql-tools",

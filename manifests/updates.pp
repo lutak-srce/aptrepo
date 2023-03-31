@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::updates
 #
+class aptrepo::updates {
 
-class aptrepo::updates (){
-  include ::apt
-  ::apt::source { 'updates':
+  include apt
+
+  apt::source { 'updates':
     location => 'http://ftp.hr.debian.org/debian/',
     release  => "${::lsbdistcodename}-updates",
     repos    => 'main contrib non-free',

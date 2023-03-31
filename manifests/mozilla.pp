@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::mozilla
 #
+class aptrepo::mozilla {
 
-class aptrepo::mozilla (){
-  include ::apt
-  ::apt::source { 'mozilla':
+  include apt
+
+  apt::source { 'mozilla':
     location     => 'http://mozilla.debian.net/',
     release      => "${::lsbdistcodename}-backports",
     architecture => 'amd64',

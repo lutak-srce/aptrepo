@@ -6,11 +6,12 @@
 # Sample Usage:
 #   include aptrepo::mongodb
 #
-
 class aptrepo::mongodb (
   $version = '5.0',
 ){
+
   include apt
+
   apt::source { 'mongodb':
     location => 'http://repo.mongodb.org/apt/debian/',
     release  => "${::lsbdistcodename}/mongodb-org/${version}",

@@ -3,7 +3,6 @@
 #
 # This module manages Adoptium repo
 #
-
 class aptrepo::adoptium {
 
   include apt

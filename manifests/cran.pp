@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::cran
 #
+class aptrepo::cran {
 
-class aptrepo::cran (){
-  include ::apt
-  ::apt::source { 'cran' :
+  include apt
+
+  apt::source { 'cran' :
     location => 'http://cloud.r-project.org/bin/linux/debian',
     release  => "${::lsbdistcodename}-cran40/",
     repos    => '',

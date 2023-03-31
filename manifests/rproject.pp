@@ -3,9 +3,10 @@
 #
 # This module manages R repo
 #
+class aptrepo::rproject {
 
-class aptrepo::rproject (){
   include apt
+
   apt::source { 'rproject' :
     location => 'https://cloud.r-project.org/bin/linux/debian',
     release  => "${::lsbdistcodename}-cran35/",

@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::matomo
 #
+class aptrepo::matomo {
 
-class aptrepo::matomo (){
-  include ::apt
-  ::apt::source { 'matomo':
+  include apt
+
+  apt::source { 'matomo':
     location => 'http://debian.matomo.org/',
     release  => 'piwik',
     repos    => 'main',

@@ -6,8 +6,7 @@
 # Sample Usage:
 #   include aptrepo::security
 #
-
-class aptrepo::security (){
+class aptrepo::security {
 
   include apt
 

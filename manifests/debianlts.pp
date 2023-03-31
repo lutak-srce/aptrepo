@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::debianlts
 #
+class aptrepo::debianlts {
 
-class aptrepo::debianlts (){
-  include ::apt
-  ::apt::source { 'debian-lts':
+  include apt
+
+  apt::source { 'debian-lts':
     location => 'http://ftp.hr.debian.org/debian/',
     release  => "${::lsbdistcodename}-lts",
     repos    => 'main contrib non-free',

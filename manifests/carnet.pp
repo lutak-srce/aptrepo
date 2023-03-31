@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::carnet
 #
+class aptrepo::carnet {
 
-class aptrepo::carnet (){
-  include ::apt
-  ::apt::source { 'carnet':
+  include apt
+
+  apt::source { 'carnet':
     location => 'http://ftp.carnet.hr/carnet-debian/',
     release  => "carnet-${::lsbdistcodename}",
     repos    => 'main non-free',

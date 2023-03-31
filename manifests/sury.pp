@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::sury
 #
+class aptrepo::sury {
 
-class aptrepo::sury (){
-  include ::apt
-  ::apt::source { 'sury':
+  include apt
+
+  apt::source { 'sury':
     location => 'https://packages.sury.org/php/',
     release  => $::lsbdistcodename,
     repos    => 'main',

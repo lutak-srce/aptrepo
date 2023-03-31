@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::srce
 #
+class aptrepo::srce {
 
-class aptrepo::srce (){
-  include ::apt
-  ::apt::source { 'srce' :
+  include apt
+
+  apt::source { 'srce' :
     location => 'http://ftp.srce.hr/srce-debian/',
     release  => "srce-${::lsbdistcodename}",
     repos    => 'main mon',

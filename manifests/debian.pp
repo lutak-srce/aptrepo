@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::debian
 #
+class aptrepo::debian {
 
-class aptrepo::debian (){
-  include ::apt
-  ::apt::source { 'debian':
+  include apt
+
+  apt::source { 'debian':
     location => 'http://ftp.hr.debian.org/debian/',
     release  => $::lsbdistcodename,
     repos    => 'main contrib non-free',

@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::puppet
 #
+class aptrepo::puppet {
 
-class aptrepo::puppet (){
-  include ::apt
-  ::apt::source { 'puppet':
+  include apt
+
+  apt::source { 'puppet':
     location => 'http://apt.puppetlabs.com/',
     release  => $::lsbdistcodename,
     repos    => 'puppet7',

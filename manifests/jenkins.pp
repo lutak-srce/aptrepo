@@ -6,8 +6,7 @@
 # Sample Usage:
 #   include aptrepo::jenkins
 #
-
-class aptrepo::jenkins (){
+class aptrepo::jenkins {
 
   apt::source { 'jenkins':
     location => 'https://pkg.jenkins.io/debian',

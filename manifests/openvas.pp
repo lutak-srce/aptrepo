@@ -6,10 +6,11 @@
 # Sample Usage:
 #   include aptrepo::openvas
 #
+class aptrepo::openvas {
 
-class aptrepo::openvas (){
-  include ::apt
-  ::apt::source { 'openvas':
+  include apt
+
+  apt::source { 'openvas':
     location => 'http://download.opensuse.org/repositories/security:/OpenVAS:/UNSTABLE:/v6/Debian_7.0/',
     release  => './',
     repos    => '',

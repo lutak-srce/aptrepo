@@ -3,10 +3,11 @@
 #
 # This module manages AdoptOpenJDK repo
 #
+class aptrepo::adoptopenjdk {
 
-class aptrepo::adoptopenjdk (){
-  include ::apt
-  ::apt::source { 'adoptopenjdk' :
+  include apt
+
+  apt::source { 'adoptopenjdk' :
     location => 'https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/',
     release  => $::lsbdistcodename,
     repos    => 'main',

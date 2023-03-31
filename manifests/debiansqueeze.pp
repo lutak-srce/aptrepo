@@ -5,11 +5,11 @@
 # Sample Usage:
 #   include aptrepo::debian
 #
+class aptrepo::debiansqueeze {
 
-class aptrepo::debiansqueeze (
-){
-  include ::apt
-  ::apt::source { 'debian':
+  include apt
+
+  apt::source { 'debian':
     location => 'http://archive.debian.org/debian/',
     release  => $::lsbdistcodename,
     repos    => 'main contrib non-free',

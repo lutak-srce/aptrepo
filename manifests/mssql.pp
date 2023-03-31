@@ -6,7 +6,7 @@
 # Sample Usage:
 #   include aptrepo::mssql
 #
-class aptrepo::mssql (){
+class aptrepo::mssql {
 
   include apt
 
