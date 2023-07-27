@@ -7,7 +7,7 @@
 #   include aptrepo::mysql
 #
 class aptrepo::mysql (
-  $version = '5.7',
+  $version = '8.0',
 ){
 
   include apt
