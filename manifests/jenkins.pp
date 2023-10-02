@@ -12,7 +12,7 @@ class aptrepo::jenkins {
     location => 'https://pkg.jenkins.io/debian',
     release  => '',
     repos    => 'binary/',
-    key      => { 'id' => '62A9756BFD780C377CF24BA8FCEF32E745F2C3D5', 'server' => 'hkp.srce.hr', },
+    key      => { 'id' => '63667EE74BBA1F0A08A698725BA31D57EF5975CA', 'server' => 'hkp.srce.hr', },
     include  => { src => false },
   }
 
