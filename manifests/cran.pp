@@ -14,7 +14,7 @@ class aptrepo::cran {
     location => 'http://cloud.r-project.org/bin/linux/debian',
     release  => "${::lsbdistcodename}-cran40/",
     repos    => '',
-    key      => { 'id' => 'E19F5F87128899B192B1A2C2AD5F960A256A04AF', 'server' => 'hkp.srce.hr', },
+    key      => { 'id' => '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7', 'server' => 'hkp.srce.hr', },
     include  => { src => true },
   }
 }
