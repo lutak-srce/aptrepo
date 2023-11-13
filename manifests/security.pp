@@ -20,7 +20,7 @@ class aptrepo::security {
           include  => { src => true },
         }
     }
-    /bullseye/: {
+    /^(bullseye|bookworm)$/: {
         apt::source { 'security':
           location => 'http://security.debian.org/',
           release  => "${::lsbdistcodename}-security",
