@@ -6,7 +6,7 @@
 # Sample Usage:
 #   include aptrepo::timescaledb
 #
-class aptrepo::emqx {
+class aptrepo::timescaledb {
 
   include apt
 

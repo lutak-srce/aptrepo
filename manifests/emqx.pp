@@ -4,7 +4,7 @@
 # This module manages emqx repo 
 #
 # Sample Usage:
-#   include aptrepo::semqx
+#   include aptrepo::emqx
 #
 class aptrepo::emqx {
 
