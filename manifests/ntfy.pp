@@ -16,6 +16,6 @@ class aptrepo::ntfy {
     release      => 'debian',
     repos        => 'main',
     key          => { 'id' => 'CF871F1E8399DAEF470832661D5B8EDFB2476E53', 'server' => 'hkp.srce.hr', },
-    include      => { src => true },
+    include      => { src => false },
   }
 }
