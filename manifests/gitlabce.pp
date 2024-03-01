@@ -1,16 +1,16 @@
 #
-# Class: aptrepo::gitlab-ce
+# Class: aptrepo::gitlabce
 #
-# This module manages Gitlab Runner repo
+# This module manages Gitlab Community edition repo
 #
 # Sample Usage:
-#   include aptrepo::gitlab-ce
+#   include aptrepo::gitlabce
 #
-class aptrepo::gitlab-ce {
+class aptrepo::gitlabce {
 
   include apt
 
-  apt::source { 'gitlab-ce':
+  apt::source { 'gitlabce':
     location     => 'https://packages.gitlab.com/gitlab/gitlab-ce/debian/',
     release      => $::lsbdistcodename,
     architecture => 'amd64',
