@@ -15,7 +15,7 @@ class aptrepo::gitlabrunner {
     release      => $::lsbdistcodename,
     architecture => 'amd64',
     repos        => 'main',
-    key          => { 'id' => '931DA69CFA3AFEBBC97DAA8C6C57C29C6BA75A4E', 'server' => 'hkp.srce.hr', },
+    key          => { 'id' => 'F6403F6544A38863DAA0B6E03F01618A51312F3F', 'server' => 'hkp.srce.hr', },
     include      => { src => true },
   }
 }
