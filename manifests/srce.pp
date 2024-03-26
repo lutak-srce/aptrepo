@@ -12,7 +12,7 @@ class aptrepo::srce {
       $release_distro  = 'srce-bullseye'
     }
     default: {
-      $release_distro  = "srce-${::lsbdistcodename}"
+      $release_distro  = "srce-${facts['os']['distro']['codename']}"
     }
   }
 
