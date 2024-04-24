@@ -12,7 +12,7 @@ class aptrepo::ubuntu::universe (){
 
   apt::source { 'universe':
     location => 'http://nova.clouds.archive.ubuntu.com/ubuntu/',
-    release  => $facts['os']['distro']['codename']
+    release  => $facts['os']['distro']['codename'],
     repos    => 'universe',
     key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
     include  => { 'src' => false },
@@ -20,7 +20,7 @@ class aptrepo::ubuntu::universe (){
 
   apt::source { 'universe-updates':
     location => 'http://nova.clouds.archive.ubuntu.com/ubuntu/',
-    release  => "${::lsbdistcodename}-updates",
+    release  => "${facts['os']['distro']['codename']}-updates",
     repos    => 'universe',
     key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
     include  => { 'src' => false },
@@ -28,7 +28,7 @@ class aptrepo::ubuntu::universe (){
 
   apt::source { 'universe-security':
     location => 'http://nova.clouds.archive.ubuntu.com/ubuntu/',
-    release  => "${::lsbdistcodename}-security",
+    release  => "${facts['os']['distro']['codename']}-security",
     repos    => 'universe',
     key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
     include  => { 'src' => false },

@@ -7,7 +7,7 @@
 #   include aptrepo::backports
 #
 class aptrepo::backports {
-  case $facts['os']['distro']['release']['major']  {
+  case $facts['os']['distro']['codename'] {
     default: {
       $debian_location = 'http://ftp.hr.debian.org/debian/'
     }
@@ -23,7 +23,7 @@ class aptrepo::backports {
 
   apt::source { 'backports':
     location => $debian_location,
-    release  => "${::lsbdistcodename}-backports",
+    release  => "${facts['os']['distro']['codename']}-backports",
     repos    => 'main contrib non-free',
     key      => { 'id' => '20691DFCC2C98C47952984EE00018C22381A7594', 'server' => 'pgp.mit.edu', },
     include  => { 'src' => true },

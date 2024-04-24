@@ -12,7 +12,7 @@ class aptrepo::mssql {
 
   apt::source { 'mssql':
     location => "https://packages.microsoft.com/debian/${::lsbmajdistrelease}/prod",
-    release  => $facts['os']['distro']['codename']
+    release  => $facts['os']['distro']['codename'],
     repos    => 'main',
     key      => { 'id' => 'BC528686B50D79E339D3721CEB3E94ADBE1229CF', 'server' => 'hkp.srce.hr', },
     include  => { src => false },
