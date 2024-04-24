@@ -7,7 +7,7 @@
 #   include aptrepo::backports
 #
 class aptrepo::backports {
-  case $::lsbdistcodename {
+  case $facts['os']['distro']['release']['major']  {
     default: {
       $debian_location = 'http://ftp.hr.debian.org/debian/'
     }

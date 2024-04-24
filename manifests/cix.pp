@@ -12,7 +12,7 @@ class aptrepo::cix {
 
   apt::source { 'cix':
     location => 'http://infra.srce.hr/repos/apt/debian',
-    release  => $::lsbdistcodename,
+    release  => $facts['os']['distro']['release']['major'] ,
     repos    => 'main',
     include  => { src => false },
   }

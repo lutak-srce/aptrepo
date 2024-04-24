@@ -11,7 +11,7 @@ class aptrepo::debiansqueeze {
 
   apt::source { 'debian':
     location => 'http://archive.debian.org/debian/',
-    release  => $::lsbdistcodename,
+    release  => $facts['os']['distro']['release']['major'] ,
     repos    => 'main contrib non-free',
     key      => { 'id' => '20691DFCC2C98C47952984EE00018C22381A7594', 'server' => 'pgp.mit.edu', },
     include  => { 'src' => true },

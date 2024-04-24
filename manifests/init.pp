@@ -9,7 +9,7 @@ class aptrepo {
     Apt::Source <| |> -> Package <| |>
   }
 
-  case $::operatingsystem {
+  case $facts['os']['name']{
     'debian': { package { 'debian-keyring': ensure => present, } }
     'ubuntu': { }
     default:  { }

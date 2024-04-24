@@ -7,7 +7,7 @@
 #   include aptrepo::srce
 #
 class aptrepo::srce {
-  case $::operatingsystem {
+  case $facts['os']['name']{
     'ubuntu': {
       $release_distro  = 'srce-bullseye'
     }

@@ -12,7 +12,7 @@ class aptrepo::puppet {
 
   apt::source { 'puppet':
     location => 'http://apt.puppetlabs.com/',
-    release  => $::lsbdistcodename,
+    release  => $facts['os']['distro']['release']['major'] ,
     repos    => 'puppet7',
     key      => { 'id' => 'D6811ED3ADEEB8441AF5AA8F4528B6CD9E61EF26', 'server' => 'hkp.srce.hr', },
     include  => { src => false },

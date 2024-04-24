@@ -10,7 +10,7 @@ class aptrepo::security {
 
   include apt
 
-  case $::lsbdistcodename {
+  case $facts['os']['distro']['release']['major']  {
     default: {
         apt::source { 'security':
           location => 'http://security.debian.org/',

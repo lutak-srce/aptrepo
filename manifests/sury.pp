@@ -12,7 +12,7 @@ class aptrepo::sury {
 
   apt::source { 'sury':
     location => 'https://packages.sury.org/php/',
-    release  => $::lsbdistcodename,
+    release  => $facts['os']['distro']['release']['major'] ,
     repos    => 'main',
     key      => { 'id' => '15058500A0235D97F5D10063B188E2B695BD4743', 'server' => 'hkp.srce.hr', },
     include  => { src => false },

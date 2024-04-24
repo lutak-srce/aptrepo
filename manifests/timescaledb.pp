@@ -12,7 +12,7 @@ class aptrepo::timescaledb {
 
   apt::source { 'timescaledb':
     location => 'https://packagecloud.io/timescale/timescaledb/debian/',
-    release  => $::lsbdistcodename,
+    release  => $facts['os']['distro']['release']['major'] ,
     repos    => 'main',
     key      => { 'id' => '1005FB68604CE9B8F6879CF759F18EDF47F24417', 'server' => 'hkp.srce.hr', },
     include  => { src => true },

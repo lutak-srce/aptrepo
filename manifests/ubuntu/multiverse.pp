@@ -12,7 +12,7 @@ class aptrepo::ubuntu::multiverse (){
 
   apt::source { 'multiverse':
     location => 'http://nova.clouds.archive.ubuntu.com/ubuntu/',
-    release  => $::lsbdistcodename,
+    release  => $facts['os']['distro']['release']['major'] ,
     repos    => 'multiverse',
     key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
     include  => { 'src' => false },
