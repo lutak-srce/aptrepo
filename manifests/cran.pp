@@ -12,7 +12,7 @@ class aptrepo::cran {
 
   apt::source { 'cran' :
     location => 'http://cloud.r-project.org/bin/linux/debian',
-    release  => "${::lsbdistcodename}-cran40/",
+    release  => "${facts['os']['distro']['codename']}-cran40/",
     repos    => '',
     key      => { 'id' => '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7', 'server' => 'hkp.srce.hr', },
     include  => { src => true },

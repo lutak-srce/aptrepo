@@ -12,7 +12,7 @@ class aptrepo::mozilla {
 
   apt::source { 'mozilla':
     location     => 'http://mozilla.debian.net/',
-    release      => "${::lsbdistcodename}-backports",
+    release      => "${facts['os']['distro']['codename']}-backports",
     architecture => 'amd64',
     repos        => 'firefox-release',
     key          => { 'id' => '85F06FBC75E067C3F305C3C985A3D26506C4AE2A', 'server' => 'pgp.mit.edu', },

@@ -10,11 +10,11 @@ class aptrepo::security {
 
   include apt
 
-  case $::lsbdistcodename {
+  case $facts['os']['distro']['codename'] {
     default: {
         apt::source { 'security':
           location => 'http://security.debian.org/',
-          release  => "${::lsbdistcodename}/updates",
+          release  => "${facts['os']['distro']['codename']}/updates",
           repos    => 'main contrib non-free',
           key      => { 'id' => '20691DFCC2C98C47952984EE00018C22381A7594', 'server' => 'pgp.mit.edu', },
           include  => { src => true },
@@ -23,7 +23,7 @@ class aptrepo::security {
     /^(bullseye|bookworm)$/: {
         apt::source { 'security':
           location => 'http://security.debian.org/',
-          release  => "${::lsbdistcodename}-security",
+          release  => "${facts['os']['distro']['codename']}-security",
           repos    => 'main contrib non-free',
           key      => { 'id' => '20691DFCC2C98C47952984EE00018C22381A7594', 'server' => 'pgp.mit.edu', },
           include  => { src => true },
