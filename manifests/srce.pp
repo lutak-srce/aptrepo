@@ -24,7 +24,7 @@ class aptrepo::srce {
     repos    => 'main mon',
 #    key      => { 'id' => 'E2FFF7957AEC9D5118B95BE2FECB42104089CBA3', 'server' => 'hkp.srce.hr', },
     key      => {
-      'name'   => 'srce-keyring.asc',
+      'name'   => 'srce.asc',
       'source' => 'http://ftp.srce.hr/srce-debian/srce-keyring.asc',
     },
     include  => { src => true },
