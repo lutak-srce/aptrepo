@@ -1,12 +1,12 @@
 #
-# Class: aptrepo::nodesource
+# Class: aptrepo::libnvidiacontainer
 #
 # This module manages NVIDIA Container Toolkit repo
 #
 # Sample Usage:
-#   include aptrepo::nvidiacontainertoolkit
+#   include aptrepo::libnvidiacontainer
 #
-class aptrepo::nvidiacontainertoolkit {
+class aptrepo::libnvidiacontainer {
 
   include apt
 
