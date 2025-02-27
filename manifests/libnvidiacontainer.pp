@@ -14,10 +14,10 @@ class aptrepo::libnvidiacontainer {
     location => "https://nvidia.github.io/libnvidia-container/stable/deb/amd64/",
     release  => '',
     repos    => '/',
+    key      => {
+      'name'   => 'libnvidiacontainer.asc',
+      'source' => 'https://nvidia.github.io/libnvidia-container/gpgkey',
+    },
     include  => { src => false },
-  }
-
-  apt::keyring { '/etc/apt/trusted.gpg.d/libnvidiacontainer.asc':
-    source => 'https://nvidia.github.io/libnvidia-container/gpgkey',
   }
 }
