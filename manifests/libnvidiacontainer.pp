@@ -10,7 +10,7 @@ class aptrepo::libnvidiacontainer {
 
   include apt
 
-  apt::source { 'nvidiacontainertoolkit' :
+  apt::source { 'libnvidiacontainer' :
     location => "https://nvidia.github.io/libnvidia-container/stable/deb/amd64/",
     release  => '',
     repos    => '/',
