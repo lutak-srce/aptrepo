@@ -17,7 +17,7 @@ class aptrepo::libnvidiacontainer {
     include  => { src => false },
   }
 
-  apt::keyring { 'libnvidiacontainer.gpg':
+  apt::keyring { '/etc/apt/trusted.gpg.d/libnvidiacontainer.asc':
     source => 'https://nvidia.github.io/libnvidia-container/gpgkey',
   }
 }
