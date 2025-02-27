@@ -17,7 +17,7 @@ class aptrepo::wazuh (
     location => "https://packages.wazuh.com/${version}.x/apt/",
     release  => 'stable',
     repos    => 'main',
-    key      => { 'id' => '0DCFCA5547B19D2A6099506096B3EE5F29111145', 'source' => 'https://packages.wazuh.com/key/GPG-KEY-WAZUH', },
+#    key      => { 'id' => '0DCFCA5547B19D2A6099506096B3EE5F29111145', 'source' => 'https://packages.wazuh.com/key/GPG-KEY-WAZUH', },
     key      => {
       'name'   => 'wazuh.asc',
       'source' => 'https://packages.wazuh.com/key/GPG-KEY-WAZUH',
