@@ -15,7 +15,11 @@ class aptrepo::gitlabce {
     release      => $facts['os']['distro']['codename'],
     architecture => 'amd64',
     repos        => 'main',
-    key          => { 'id' => 'F6403F6544A38863DAA0B6E03F01618A51312F3F', 'server' => 'hkp.srce.hr', },
+#    key          => { 'id' => 'F6403F6544A38863DAA0B6E03F01618A51312F3F', 'server' => 'hkp.srce.hr', },
+    key          => {
+      'name'   => 'gitlab.asc',
+      'source' => 'https://packages.gitlab.com/gpg.key',
+    },
     include      => { src => true },
   }
 }
