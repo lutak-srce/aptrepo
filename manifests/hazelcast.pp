@@ -14,6 +14,10 @@ class aptrepo::hazelcast {
     location => 'https://repository.hazelcast.com/debian',
     release  => 'stable',
     repos    => 'main',
-    key      => { 'id' => '39A1EBFA22C0181014C4899D860675EEBAC22464', 'server' => 'hkp.srce.hr', },
+#    key      => { 'id' => '39A1EBFA22C0181014C4899D860675EEBAC22464', 'server' => 'hkp.srce.hr', },
+    key      => {
+      'name'   => 'hazelcast.asc',
+      'source' => 'https://repository.hazelcast.com/api/gpg/key/public',
+    },
   }
 }
