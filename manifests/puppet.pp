@@ -16,7 +16,7 @@ class aptrepo::puppet {
     repos    => 'puppet7',
 #    key      => { 'id' => 'D6811ED3ADEEB8441AF5AA8F4528B6CD9E61EF26', 'server' => 'hkp.srce.hr', },
     key      => {
-      'name'   => 'pubkey.asc',
+      'name'   => 'puppet.asc',
       'source' => 'https://apt.puppet.com/pubkey.gpg',
     },
     include  => { src => false },
