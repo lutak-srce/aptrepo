@@ -1,10 +1,10 @@
 #
-# Class: aptrepo::wazuh
+# Class: aptrepo::zabbix
 #
-# This module manages wazuh repo
+# This module manages zabbix repo
 #
 # Sample Usage:
-#   include aptrepo::wazuh
+#   include aptrepo::zabbix
 #
 class aptrepo::zabbix (
   $zabbix_version = '6.0'
