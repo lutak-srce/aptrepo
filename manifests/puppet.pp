@@ -17,7 +17,7 @@ class aptrepo::puppet {
 #    key      => { 'id' => 'D6811ED3ADEEB8441AF5AA8F4528B6CD9E61EF26', 'server' => 'hkp.srce.hr', },
     key      => {
       'name'   => 'puppet.asc',
-      'source' => 'https://apt.puppet.com/pubkey.gpg',
+      'source' => 'https://apt.puppet.com/DEB-GPG-KEY-future',
     },
     include  => { src => false },
   }
