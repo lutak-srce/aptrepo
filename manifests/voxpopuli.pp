@@ -17,7 +17,7 @@ class aptrepo::voxpopuli (
   include apt
 
   apt::source { 'voxpopuli':
-    location => 'https://apt.overlookinfratech.com/',
+    location => 'https://apt.overlookinfratech.com',
     release  => $rel,
     repos    => $repo,
     key      => {
