@@ -10,10 +10,12 @@ class aptrepo::voxpopuli (
   $repo = 'openvox7'
 ){
   case $facts['os']['distro']['codename'] {
-      'bullseye': { $rel  = 'debian11' }
-      'bookworm': { $rel  = 'debian12' }
-      'jammy'   : { $rel = 'ubuntu22.04'}
-    }
+      'bullseye': { $rel  = 'debian11'    }
+      'bookworm': { $rel  = 'debian12'    }
+      'jammy'   : { $rel  = 'ubuntu22.04' }
+      default   : { fail('Unsupported distro') }
+  }
+
   include apt
 
   apt::source { 'voxpopuli':
