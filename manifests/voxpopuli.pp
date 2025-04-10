@@ -20,7 +20,7 @@ class aptrepo::voxpopuli (
 
   apt::source { 'voxpopuli':
     location => 'https://apt.overlookinfratech.com',
-    release  => "downcase(${facts['os']['name']})${facts['os']['distro']['release']['major']}",
+    release  => "${downcase($facts['os']['name'])}${facts['os']['distro']['release']['major']}",
     repos    => $repo,
     key      => {
       'name'   => 'voxpopuli.gpg',
