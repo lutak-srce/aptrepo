@@ -15,7 +15,7 @@ class aptrepo::cix {
     release  => $facts['os']['distro']['codename'],
     repos    => 'main',
     include  => { src => false },
-    key      => '/etc/apt/keyrings/cix.asc',
+    keyring  => '/etc/apt/keyrings/cix.asc',
   }
 
 }
