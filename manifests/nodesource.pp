@@ -18,7 +18,7 @@ class aptrepo::nodesource (
     architecture => 'amd64',
     repos        => 'main',
 #    key          => { 'id' => '9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280', 'server' => 'hkp.srce.hr', },
-    keyring      => {
+    key      => {
       'name'   => 'nodesource.gpg',
       'source' => 'https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key',
     },
