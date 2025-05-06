@@ -13,15 +13,11 @@ class aptrepo::nodesource (
   include apt
 
   apt::source { 'nodesource' :
-    location => "https://deb.nodesource.com/node_${version}.x",
-    release  => $facts['os']['distro']['codename'],
+    location     => "https://deb.nodesource.com/node_${version}.x",
+    release      => $facts['os']['distro']['codename'],
     architecture => 'amd64',
-    repos    => 'main',
-#    key      => { 'id' => '9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280', 'server' => 'hkp.srce.hr', },
-    key      => {
-      'name'   => 'nodesource-repo.gpg',
-      'source' => 'https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key',
-    },
-    include  => { src => true },
+    repos        => 'main',
+    key          => { 'id' => '9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280', 'server' => 'hkp.srce.hr', },
+    include      => { src => true },
   }
 }
