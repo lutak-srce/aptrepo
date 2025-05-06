@@ -14,7 +14,8 @@ class aptrepo::adoptium {
 #    key      => { 'id' => '3B04D753C9050D9A5D343F39843C48A565F8F04B', 'server' => 'hkp.srce.hr', },
     key      => {
       'name'   => 'adoptium.asc',
-      'source' => 'https://packages.adoptium.net/artifactory/api/gpg/key/public',
+#      'source' => 'https://packages.adoptium.net/artifactory/api/gpg/key/public',
+      'source' => 'http://ftp.srce.hr/srce-debian/adoptium-keyring.asc',
     },
     include  => { src => false },
   }
