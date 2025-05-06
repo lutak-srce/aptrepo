@@ -12,7 +12,11 @@ class aptrepo::jenkins {
     location => 'https://pkg.jenkins.io/debian',
     release  => '',
     repos    => 'binary/',
-    key      => { 'id' => '63667EE74BBA1F0A08A698725BA31D57EF5975CA', 'server' => 'hkp.srce.hr', },
+#    key      => { 'id' => '63667EE74BBA1F0A08A698725BA31D57EF5975CA', 'server' => 'hkp.srce.hr', },
+    key      => {
+      'name'   => 'jenkins.asc',
+      'source' => 'https://pkg.jenkins.io/debian/jenkins.io-2023.key',
+    },
     include  => { src => false },
   }
 
