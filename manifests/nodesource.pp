@@ -22,7 +22,7 @@ class aptrepo::nodesource (
       'name'   => 'nodesource.gpg',
       'source' => 'http://ftp.srce.hr/srce-debian/nodesource.gpg',
     },
-    include      => { src => true },
+    include      => { src => false },
   }
 
 }
