@@ -11,6 +11,7 @@ class aptrepo::zabbix (
 ){
 
   include apt
+  Exec { path => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ] }
 
   apt::source { 'zabbix':
     location     => "http://repo.zabbix.com/zabbix/${zabbix_version}/debian/",
