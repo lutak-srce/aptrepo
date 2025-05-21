@@ -17,7 +17,7 @@ class aptrepo::hazelcast {
 #    key      => { 'id' => '39A1EBFA22C0181014C4899D860675EEBAC22464', 'server' => 'hkp.srce.hr', },
     key      => {
       'name'   => 'hazelcast.asc',
-      'source' => 'https://repository.hazelcast.com/api/gpg/key/public',
+      'source' => 'http://ftp.srce.hr/srce-debian/hazelcast-keyring.asc',
     },
   }
 }
