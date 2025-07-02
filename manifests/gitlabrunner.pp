@@ -16,7 +16,7 @@ class aptrepo::gitlabrunner {
     architecture => 'amd64',
     repos        => 'main',
 #    key          => { 'id' => 'F6403F6544A38863DAA0B6E03F01618A51312F3F', 'server' => 'hkp.srce.hr', },
-    key      => {
+    key          => {
       'name'   => 'gitlab.asc',
       'source' => 'https://packages.gitlab.com/gpg.key',
     },
