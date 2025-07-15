@@ -1,22 +1,22 @@
 #
-# Class: aptrepo::voxpopuli
+# Class: aptrepo::openvox
 #
-# This module manages voxpopuli repo
+# This module manages openvox repo
 #
 # Sample Usage:
-#   include aptrepo::voxpopuli
+#   include aptrepo::openvox
 #
-class aptrepo::voxpopuli (
-  $repo = 'openvox7'
+class aptrepo::openvox (
+  $repo = 'openvox8'
 ){
   include apt
 
-  apt::source { 'voxpopuli':
+  apt::source { 'openvox':
     location => 'https://apt.overlookinfratech.com',
     release  => "${downcase($facts['os']['name'])}${facts['os']['distro']['release']['major']}",
     repos    => $repo,
     key      => {
-      'name'   => 'voxpopuli.gpg',
+      'name'   => 'openvox.gpg',
       'source' => 'https://apt.voxpupuli.org/openvox-keyring.gpg',
     },
     include  => { src => false },
