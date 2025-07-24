@@ -14,6 +14,9 @@ class aptrepo::backports {
     /squeeze/: {
       $debian_location = 'http://backports.debian.org/debian-backports/'
     }
+    /bullseye/: {
+      $debian_location = 'http://backports.debian.org/debian-backports/'
+    }
     /wheezy/: {
       $debian_location = 'http://ftp.hr.debian.org/debian/'
     }
