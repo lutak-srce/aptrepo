@@ -12,7 +12,11 @@ class aptrepo::radiatorsoftware_srce {
     architecture => 'amd64',
     release      => $facts['os']['distro']['codename'],
     repos        => 'stable',
-    key          => { 'id' => '71FDBD745DA6CA9F7654B3D07E3FE75EB09DF6BB', 'server' => 'hkp.srce.hr', },
-    include      => { src => false },
+#    key          => { 'id' => '71FDBD745DA6CA9F7654B3D07E3FE75EB09DF6BB', 'server' => 'hkp.srce.hr', },
+#    include      => { src => false },
+    key          => {
+      'name'   => 'radiator.asc',
+      'source' => 'http://ftp.srce.hr/srce-debian/radiator-keyring.asc',
+    },
   }
 }
