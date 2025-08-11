@@ -25,7 +25,7 @@ class aptrepo::srce {
     $release_distro = 'srce-trixie'
     $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
   } else {
-    $release_distro = $facts['os']['distro']['codename']
+    $release_distro = "srce-${facts['os']['distro']['codename']}"
     $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring.asc'
   }
 
