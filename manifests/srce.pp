@@ -9,12 +9,16 @@
 class aptrepo::srce {
 
   case $facts['os']['distro']['codename']{
-    default: {
-      $release_distro = "srce-${facts['os']['distro']['codename']}"
+    /(bookworm|bullseye)/: {
+      $release_distro  = "srce-${facts['os']['distro']['codename']}"
       $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring.asc'
     }
-    /(trixie|jammy|noble)/: {
+    /(noble|jammy)/: {
       $release_distro  = 'srce-trixie'
+      $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
+    }
+    default: {
+      $release_distro  = "srce-${facts['os']['distro']['codename']}"
       $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
     }
   }
