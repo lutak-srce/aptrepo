@@ -15,7 +15,7 @@ class aptrepo::srce {
     }
   }
   case $facts['os']['distro']['codename']{
-    default: { $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring.asc' }
+    default: {  }
     'trixie': { $trixie = true }
   }
   if $trixie == true {
