@@ -9,11 +9,16 @@
 class aptrepo::srce {
   case $facts['os']['name']{
     'ubuntu': {
-      $release_distro  = 'srce-bullseye'
+      $release_distro  = 'srce-trixie'
+      $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
     }
     default: {
       $release_distro  = "srce-${facts['os']['distro']['codename']}"
     }
+  }
+  case $facts['os']['distro']['codename']{
+    default: { $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring.asc' }
+    'trixie': { $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc' }
   }
 
   include apt
@@ -25,7 +30,7 @@ class aptrepo::srce {
 #    key      => { 'id' => 'E2FFF7957AEC9D5118B95BE2FECB42104089CBA3', 'server' => 'hkp.srce.hr', },
     key      => {
       'name'   => 'srce.asc',
-      'source' => 'http://ftp.srce.hr/srce-debian/srce-keyring.asc',
+      'source' => $srce_key_source,
     },
     include  => { src => true },
   }
