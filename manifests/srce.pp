@@ -9,8 +9,7 @@
 class aptrepo::srce {
   case $facts['os']['name']{
     'ubuntu': {
-      $release_distro  = 'srce-trixie'
-      $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
+      $release_distro  = 'srce-bookworm'
     }
     default: {
       $release_distro  = "srce-${facts['os']['distro']['codename']}"
