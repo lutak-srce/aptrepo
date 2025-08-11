@@ -6,27 +6,17 @@
 # Sample Usage:
 #   include aptrepo::srce
 #
-class aptrepo::srce ( $trixie = false ) {
-  case $facts['os']['name']{
-    'ubuntu': {
-      $ubuntu = true
-    }
-    default: {
-    }
-  }
+class aptrepo::srce {
+
   case $facts['os']['distro']['codename']{
-    default: {  }
-    'trixie': { $trixie = true }
-  }
-  if $trixie == true {
-    $release_distro  = 'srce-trixie'
-    $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
-  } elsif $ubuntu == true {
-    $release_distro = 'srce-trixie'
-    $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
-  } else {
-    $release_distro = "srce-${facts['os']['distro']['codename']}"
-    $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring.asc'
+    default: {
+      $release_distro = "srce-${facts['os']['distro']['codename']}"
+      $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring.asc'
+    }
+    /(trixie|jammy|noble)/: {
+      $release_distro  = 'srce-trixie'
+      $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
+    }
   }
 
   include apt
@@ -35,7 +25,6 @@ class aptrepo::srce ( $trixie = false ) {
     location => 'http://ftp.srce.hr/srce-debian/',
     release  => $release_distro,
     repos    => 'main mon',
-#    key      => { 'id' => 'E2FFF7957AEC9D5118B95BE2FECB42104089CBA3', 'server' => 'hkp.srce.hr', },
     key      => {
       'name'   => 'srce.asc',
       'source' => $srce_key_source,
