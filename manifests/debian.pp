@@ -23,7 +23,7 @@ class aptrepo::debian {
     location => 'http://ftp.hr.debian.org/debian/',
     release  => $facts['os']['distro']['codename'],
     repos    => $repo_list,
-    key      => { 'id' => '20691DFCC2C98C47952984EE00018C22381A7594', 'server' => 'hkp.srce.hr' },
+  #  key      => { 'id' => '20691DFCC2C98C47952984EE00018C22381A7594', 'server' => 'hkp.srce.hr' },
     include  => { 'src' => true },
   }
 }
