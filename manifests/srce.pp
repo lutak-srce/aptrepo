@@ -6,7 +6,7 @@
 # Sample Usage:
 #   include aptrepo::srce
 #
-class aptrepo::srce {
+class aptrepo::srce ( $trixie = false ) {
   case $facts['os']['name']{
     'ubuntu': {
       $ubuntu = true
