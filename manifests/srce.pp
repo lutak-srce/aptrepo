@@ -21,8 +21,8 @@ class aptrepo::srce {
   if $trixie == true {
     $release_distro  = 'srce-trixie'
     $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
-  } elseif $ubuntu == true {
-    $release_distro  = 'srce-trixie'
+  } elsif $ubuntu == true {
+    $release_distro = 'srce-trixie'
     $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
   } else {
     $release_distro = $facts['os']['distro']['codename']
