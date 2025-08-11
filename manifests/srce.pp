@@ -9,10 +9,9 @@
 class aptrepo::srce {
   case $facts['os']['name']{
     'ubuntu': {
-      $trixie = true
+      $ubuntu = true
     }
     default: {
-      $release_distro  = "srce-${facts['os']['distro']['codename']}"
     }
   }
   case $facts['os']['distro']['codename']{
@@ -22,6 +21,12 @@ class aptrepo::srce {
   if $trixie == true {
     $release_distro  = 'srce-trixie'
     $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
+  } elseif $ubuntu == true {
+    $release_distro  = 'srce-trixie'
+    $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring-rsa3072.asc'
+  } else {
+    $release_distro = $facts['os']['distro']['codename']
+    $srce_key_source = 'http://ftp.srce.hr/srce-debian/srce-keyring.asc'
   }
 
   include apt
