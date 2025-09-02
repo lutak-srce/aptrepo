@@ -14,6 +14,10 @@ class aptrepo::elastic {
     location => 'https://artifacts.elastic.co/packages/8.x/apt',
     release  => 'stable',
     repos    => 'main',
+    key      => {
+      'name'   => 'elastic.asc',
+      'source' => 'https://packages.elastic.co/GPG-KEY-elasticsearch',
+    },
     include  => { src => false },
   }
 }
