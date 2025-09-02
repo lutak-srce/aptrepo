@@ -16,7 +16,7 @@ class aptrepo::hazelcast {
     repos    => 'main',
     key      => {
       'name'   => 'hazelcast.asc',
-      'source' => 'https://repository.hazelcast.com/api/gpg/key/public',
+      'source' => 'http://ftp.srce.hr/srce-debian/hazelcast-keyring.asc',
     },
   }
 }
