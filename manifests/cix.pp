@@ -15,7 +15,10 @@ class aptrepo::cix {
     release  => $facts['os']['distro']['codename'],
     repos    => 'main',
     include  => { src => false },
-    keyring  => '/etc/apt/keyrings/cix.asc',
+    key      => {
+      'name'   => 'cix.asc',
+      'source' => 'http://cixpkg.srce.hr/repos/bookworm.gpg.key',
+    },
   }
 
 }
