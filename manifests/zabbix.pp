@@ -12,13 +12,6 @@ class aptrepo::zabbix (
 
 ){
 
-  case $facts['os']['distro']['codename']{
-    default: { }
-    'trixie': {
-      $zabbix_version = '7.0'
-      }
-  }
-
   include apt
 
   apt::source { 'zabbix':
