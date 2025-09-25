@@ -16,7 +16,10 @@ class aptrepo::mongodb (
     location => 'http://repo.mongodb.org/apt/debian/',
     release  => "${facts['os']['distro']['codename']}/mongodb-org/${version}",
     repos    => 'main',
-    key      => { 'id' => 'F5679A222C647C87527C2F8CB00A0BD1E2C63C11', 'server' => 'hkp.srce.hr', },
+    key      => {
+      'name'   => 'mongodb.asc',
+      'source' => 'https://www.mongodb.org/static/pgp/server-7.0.asc',
+    },
     include  => { src => false },
   }
 }
