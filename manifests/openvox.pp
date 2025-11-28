@@ -12,14 +12,14 @@ class aptrepo::openvox (
   include apt
 
   apt::source { 'openvox':
-    location => 'https://apt.overlookinfratech.com',
-    release  => "${downcase($facts['os']['name'])}${facts['os']['distro']['release']['major']}",
-    repos    => $repo,
+    location     => 'https://apt.voxpupuli.org',
+    release      => "${downcase($facts['os']['name'])}${facts['os']['distro']['release']['major']}",
+    repos        => $repo,
     architecture => 'amd64',
-    key      => {
+    key          => {
       'name'   => 'openvox.gpg',
       'source' => 'https://apt.voxpupuli.org/openvox-keyring.gpg',
     },
-    include  => { src => false },
+    include      => { src => false },
   }
 }
