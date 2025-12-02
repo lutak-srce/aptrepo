@@ -19,8 +19,8 @@ class aptrepo::mysql (
     pin      => '600',
 #    key      => { 'id' => 'BCA43417C3B485DD128EC6D4B7B3B788A8D3785C', 'server' => 'hkp.srce.hr', },
     key      => {
-      'name'   => 'mysql.asc',
-      'source' => 'http://ftp.srce.hr/srce-debian/mysql-keyring.asc',
+      'name'   => 'mysql.gpg',
+      'source' => 'https://repo.mysql.com/apt/debian/dists/trixie/Release.gpg',
     },
     include  => { src => false },
   }
