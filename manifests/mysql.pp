@@ -20,7 +20,7 @@ class aptrepo::mysql (
 #    key      => { 'id' => 'BCA43417C3B485DD128EC6D4B7B3B788A8D3785C', 'server' => 'hkp.srce.hr', },
     key      => {
       'name'   => 'mysql.asc',
-      'source' => 'http://ftp.srce.hr/srce-debian/mysql-keyring.asc',
+      'source' => 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xb7b3b788a8d3785c',
     },
     include  => { src => false },
   }
