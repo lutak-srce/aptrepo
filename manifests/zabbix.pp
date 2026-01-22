@@ -8,7 +8,7 @@
 #
 class aptrepo::zabbix (
 
-  $zabbix_version = '6.0'
+  $zabbix_version = '7.0'
 
 ){
 
