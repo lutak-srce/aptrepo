@@ -13,7 +13,6 @@ class aptrepo::mellanox {
   apt::source { 'mellanox':
     location => 'http://linux.mellanox.com/public/repo/doca/latest-3.2-LTS/debian12/x86_64/',
     release  => './',
-    repos    => '',
     key      => {
       'name'   => 'mellanox.asc',
       'source' => 'http://linux.mellanox.com/public/repo/doca/latest-3.2-LTS/debian12/x86_64/GPG-KEY-Mellanox.pub',
