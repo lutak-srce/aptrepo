@@ -14,7 +14,7 @@ class aptrepo::ntop {
     location => "https://packages.ntop.org/apt-stable/${facts['os']['distro']['codename']}/",
     release  => 'x64',
     key      => {
-      'name'   => 'ntop.asc',
+      'name'   => 'ntop-x64.asc',
       'source' => 'https://packages.ntop.org/apt-stable/ntop.key',
     },
     include  => { src => false },
@@ -23,7 +23,7 @@ class aptrepo::ntop {
     location => "https://packages.ntop.org/apt-stable/${facts['os']['distro']['codename']}/",
     release  => 'all',
     key      => {
-      'name'   => 'ntop.asc',
+      'name'   => 'ntop-all.asc',
       'source' => 'https://packages.ntop.org/apt-stable/ntop.key',
     },
     include  => { src => false },
