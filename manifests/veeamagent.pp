@@ -17,7 +17,7 @@ class aptrepo::veeamagent {
     architecture => 'amd64',
     key          => {
       'name'   => 'veeam.gpg',
-      'source' => 'https://repository.veeam.com/apt/public.key',
+      'source' => 'https://repository.veeam.com/keys/DEB-9BB5AC67.gpg',
     },
     include      => { src => false, deb => true },
   }
