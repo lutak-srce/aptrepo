@@ -17,7 +17,7 @@ class aptrepo::mssql {
 #    key      => { 'id' => 'BC528686B50D79E339D3721CEB3E94ADBE1229CF', 'server' => 'hkp.srce.hr', },
     key      => {
       'name'   => 'mssql.asc',
-      'source' => 'https://packages.microsoft.com/keys/microsoft.asc',
+      'source' => 'https://packages.microsoft.com/keys/microsoft-2025.asc',
     },
     include  => { src => false },
   }
