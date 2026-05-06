@@ -13,10 +13,11 @@ class aptrepo::clickhouse {
     release      => 'stable',
     architecture => 'amd64',
     repos        => 'main',
-    key      => {
+    key          => {
       'name'   => 'clickhouse.asc',
       'source' => 'https://packages.clickhouse.com/rpm/lts/repodata/repomd.xml.key',
     },
-    include  => { src => true },
+    include      => { src => false },
   }
+
 }
