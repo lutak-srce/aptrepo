@@ -7,7 +7,7 @@
 #   include aptrepo::elastic
 #
 class aptrepo::elastic (
-  $version = '8.x',
+  $version = '9.x',
 ){
 
   include apt
@@ -17,7 +17,7 @@ class aptrepo::elastic (
     release  => 'stable',
     repos    => 'main',
     key      => {
-      'name'   => 'elastic.asc',
+      'name'   => 'elastic.gpg',
       'source' => 'https://packages.elastic.co/GPG-KEY-elasticsearch',
     },
     include  => { src => false },
