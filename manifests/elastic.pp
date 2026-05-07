@@ -12,7 +12,7 @@ class aptrepo::elastic (
 
   include apt
 
-  apt::source { 'elastic-8.x':
+  apt::source { 'elastic':
     location => "https://artifacts.elastic.co/packages/${version}/apt",
     release  => 'stable',
     repos    => 'main',
