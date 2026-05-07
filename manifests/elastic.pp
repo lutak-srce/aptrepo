@@ -6,21 +6,19 @@
 # Sample Usage:
 #   include aptrepo::elastic
 #
-class aptrepo::elastic (
-  $version = '9.x',
-){
+class aptrepo::elastic {
 
   include apt
 
   apt::source { 'elastic':
-    location => "https://artifacts.elastic.co/packages/${version}/apt",
+    location => 'https://artifacts.elastic.co/packages/9.x/apt',
     release  => 'stable',
     repos    => 'main',
     key      => {
-      'name'   => 'elastic.asc',
-      'source' => 'https://packages.elastic.co/GPG-KEY-elasticsearch',
+      'name'   => 'elastic.gpg',
+      'source' => 'https://artifacts.elastic.co/GPG-KEY-elasticsearch',
     },
     include  => { src => false },
-    allow_insecure => true
+    #allow_insecure => true
   }
 }
