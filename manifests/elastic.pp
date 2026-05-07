@@ -6,12 +6,14 @@
 # Sample Usage:
 #   include aptrepo::elastic
 #
-class aptrepo::elastic {
+class aptrepo::elastic (
+  $version = '8.x',
+){
 
   include apt
 
   apt::source { 'elastic-8.x':
-    location => 'https://artifacts.elastic.co/packages/8.x/apt',
+    location => "https://artifacts.elastic.co/packages/${version}/apt",
     release  => 'stable',
     repos    => 'main',
     key      => {
