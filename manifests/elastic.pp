@@ -21,5 +21,6 @@ class aptrepo::elastic (
       'source' => 'https://packages.elastic.co/GPG-KEY-elasticsearch',
     },
     include  => { src => false },
+    allow_insecure => true
   }
 }
