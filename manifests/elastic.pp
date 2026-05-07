@@ -17,7 +17,7 @@ class aptrepo::elastic (
     release  => 'stable',
     repos    => 'main',
     key      => {
-      'name'   => 'elastic.gpg',
+      'name'   => 'elastic.asc',
       'source' => 'https://packages.elastic.co/GPG-KEY-elasticsearch',
     },
     include  => { src => false },
