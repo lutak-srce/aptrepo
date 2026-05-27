@@ -14,7 +14,10 @@ class aptrepo::emqx {
     location => 'https://packages.emqx.com/emqx/emqx/debian/',
     release  => $facts['os']['distro']['codename'],
     repos    => 'main',
-    key      => { 'id' => '68F8AF1B10287ADE8AE7FDEC01402CC4209FFEEA', 'server' => 'hkp.srce.hr', },
+    key      => {
+      'name'   => 'emqx.asc',
+      'source' => 'https://ftp.srce.hr/srce-debian/emqx.asc',
+    },
     include  => { src => true },
   }
 }
