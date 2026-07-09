@@ -11,11 +11,11 @@ class aptrepo::mellanox {
   include apt
 
   apt::source { 'mellanox':
-    location => 'http://linux.mellanox.com/public/repo/doca/latest-3.2-LTS/debian12/x86_64/',
+    location => 'https://linux.mellanox.com/public/repo/doca/3.2.2/debian12/x86_64/',
     release  => './',
     key      => {
       'name'   => 'mellanox.asc',
-      'source' => 'http://linux.mellanox.com/public/repo/doca/latest-3.2-LTS/debian12/x86_64/GPG-KEY-Mellanox.pub',
+      'source' => 'https://linux.mellanox.com/public/repo/doca/3.2.2/debian12/x86_64/GPG-KEY-Mellanox.pub',
     },
     include  => { src => false },
   }
