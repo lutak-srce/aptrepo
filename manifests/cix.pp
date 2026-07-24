@@ -11,7 +11,7 @@ class aptrepo::cix {
   include apt
 
   apt::source { 'cix':
-    location => 'http://cixpkg.srce.hr/repos/apt/debian',
+    location => 'http://cixpkg.srce.hr/repos7.3.1/apt/debian bookworm main',
     release  => $facts['os']['distro']['codename'],
     repos    => 'main',
     include  => { src => false },
