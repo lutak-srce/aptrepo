@@ -16,7 +16,7 @@ class aptrepo::chrome {
     architecture => 'amd64',
     repos        => 'main',
     key          => {
-      'name'   => 'cix.asc',
+      'name'   => 'chrome.asc',
       'source' => 'https://dl.google.com/linux/linux_signing_key.pub'
     },
     #key          => { 'id' => '4CCA1EAF950CEE4AB83976DCA040830F7FAC5991', 'server' => 'pgp.mit.edu', },
