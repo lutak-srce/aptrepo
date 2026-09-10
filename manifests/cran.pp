@@ -10,10 +10,13 @@ class aptrepo::cran {
 
   include apt
 
-  apt::source { 'cran' :
-    location => 'http://cloud.r-project.org/bin/linux/debian',
+  apt::source { 'cran':
+    location => 'https://cloud.r-project.org/bin/linux/debian',
     release  => "${facts['os']['distro']['codename']}-cran40/",
-    key      => { 'id' => '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7', 'server' => 'hkp.srce.hr', },
+    key      => {
+      'name'   => 'cran.asc',
+      'source' => 'https://cloud.r-project.org/bin/linux/debian/marutter_pubkey.asc',
+    },
     include  => { src => true },
   }
 }
