@@ -15,7 +15,7 @@ class aptrepo::cran {
     release  => "${facts['os']['distro']['codename']}-cran40/",
     key      => {
       'name'   => 'cran.asc',
-      'source' => 'https://cloud.r-project.org/bin/linux/debian/marutter_pubkey.asc',
+      'source' => 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7',
     },
     include  => { src => true },
   }
