@@ -25,10 +25,9 @@ class aptrepo::opensearch {
     location => "https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/3.x/apt",
     release  => 'stable',
     repos    => 'main',
-    key      => {
-      'name'   => 'opensearch.asc',
-    },
+    keyring  => '/etc/apt/keyrings/opensearch.asc',
     include  => { src => false },
+    require  => Apt::Source['opensearch'],
   }
 
 }
