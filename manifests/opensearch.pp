@@ -20,7 +20,6 @@ class aptrepo::opensearch {
     },
     include      => { src => false },
   }
-
   apt::source { 'opensearch-dashboards':
     location => "https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/3.x/apt",
     release  => 'stable',
@@ -29,5 +28,4 @@ class aptrepo::opensearch {
     include  => { src => false },
     require  => Apt::Source['opensearch'],
   }
-
 }
