@@ -20,4 +20,15 @@ class aptrepo::opensearch {
     },
     include      => { src => false },
   }
+
+  apt::source { 'opensearch-dashboards':
+    location => "https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/3.x/apt",
+    release  => 'stable',
+    repos    => 'main',
+    key      => {
+      'name'   => 'opensearch.asc',
+    },
+    include  => { src => false },
+  }
+
 }
