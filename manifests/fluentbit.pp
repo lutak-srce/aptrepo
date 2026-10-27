@@ -11,7 +11,7 @@ class aptrepo::fluentbit {
   include apt
 
   apt::source { 'fluent-bit':
-    location => 'https://packages.fluentbit.io/debian/',
+    location => "https://packages.fluentbit.io/debian/${facts['os']['distro']['codename']}",
     release => $facts['os']['distro']['codename'],
     repos    => 'main',
     key      => {
