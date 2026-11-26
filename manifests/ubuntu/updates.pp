@@ -13,7 +13,7 @@ class aptrepo::ubuntu::updates (){
     location => 'http://nova.clouds.archive.ubuntu.com/ubuntu/',
     release  => "${facts['os']['distro']['codename']}-updates",
     repos    => 'main restricted',
-    keyring  => '/etc/apt/keyrings/ubuntu-archive-2018.asc',
+    keyring => '/usr/share/keyrings/ubuntu-archive-keyring.gpg',
     include  => { 'src' => false },
   }
 }

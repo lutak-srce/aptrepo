@@ -14,7 +14,7 @@ class aptrepo::ubuntu::security () {
     release  => "${facts['os']['distro']['codename']}-security",
     repos    => 'main restricted',
     #key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
-    keyring  => '/etc/apt/keyrings/ubuntu-archive-2018.asc',
+    keyring => '/usr/share/keyrings/ubuntu-archive-keyring.gpg',
     include  => { 'src' => false },
   }
 }
