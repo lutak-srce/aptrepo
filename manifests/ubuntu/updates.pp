@@ -15,7 +15,7 @@ class aptrepo::ubuntu::updates (){
     repos    => 'main restricted',
     key      => {
       'name'   => 'ubuntu-archive-2018.asc',
-      'source' => 'https://ubuntu.com/pks/lookup?op=get&options=mr&search=0x871920D1991BC93',
+      'source' => 'https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x871920D1991BC93c',
     },
     include  => { 'src' => false },
   }
