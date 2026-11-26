@@ -14,7 +14,7 @@ class aptrepo::ubuntu::multiverse () {
     release  => $facts['os']['distro']['codename'],
     repos    => 'multiverse',
     #key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
-    keyring  => '/usr/share/keyrings/ubuntu-archive-keyring.gpg',
+    keyring  => '/usr/share/keyrings/ubuntu-archive-2018.asc',
     include  => { 'src' => false },
   }
 
@@ -23,7 +23,7 @@ class aptrepo::ubuntu::multiverse () {
     release  => "${facts['os']['distro']['codename']}-updates",
     repos    => 'multiverse',
     #key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
-    keyring  => '/usr/share/keyrings/ubuntu-archive-keyring.gpg',
+    keyring  => '/usr/share/keyrings/ubuntu-archive-2018.asc',
     include  => { 'src' => false },
   }
 
@@ -32,7 +32,7 @@ class aptrepo::ubuntu::multiverse () {
     release  => "${facts['os']['distro']['codename']}-security",
     repos    => 'multiverse',
     #key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
-    keyring  => '/usr/share/keyrings/ubuntu-archive-keyring.gpg',
+    keyring  => '/usr/share/keyrings/ubuntu-archive-2018.asc',
     include  => { 'src' => false },
   }
 }
