@@ -6,16 +6,18 @@
 # Sample Usage:
 #   include aptrepo::ubuntu::security
 #
-class aptrepo::ubuntu::security (){
-
+class aptrepo::ubuntu::security () {
   include apt
 
-    apt::source { 'security':
-      location => 'http://security.ubuntu.com/ubuntu',
-      release  => "${facts['os']['distro']['codename']}-security",
-      repos    => 'main restricted',
-      key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
-      include  => { 'src' => false },
-    }
-
+  apt::source { 'security':
+    location => 'http://security.ubuntu.com/ubuntu',
+    release  => "${facts['os']['distro']['codename']}-security",
+    repos    => 'main restricted',
+    #key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
+    key      => {
+      'name'   => 'ubuntu-archive-2018.asc',
+      'source' => 'https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x871920D1991BC93c',
+    },
+    include  => { 'src' => false },
+  }
 }
