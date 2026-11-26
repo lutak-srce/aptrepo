@@ -7,15 +7,17 @@
 #   include aptrepo::ubuntu
 #
 class aptrepo::ubuntu (){
-
   include apt
 
   apt::source { 'ubuntu':
     location => 'http://nova.clouds.archive.ubuntu.com/ubuntu/',
     release  => $facts['os']['distro']['codename'],
     repos    => 'main restricted',
-    key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
+    #key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
+    key      => {
+      'name'   => 'ubuntu-archive-2018.asc',
+      'source' => 'https://keyserver.ubuntu.com/pks/lookup?op=get&options=mr&search=0x871920D1991BC93c',
+    },
     include  => { 'src' => false },
   }
-
 }
