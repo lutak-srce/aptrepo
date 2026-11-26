@@ -14,7 +14,7 @@ class aptrepo::ubuntu::backports () {
     release  => "${facts['os']['distro']['codename']}-backports",
     repos    => 'main restricted universe multiverse',
     #key      => { 'id' => 'F6ECB3762474EDA9D21B7022871920D1991BC93C', 'server' => 'hkp.srce.hr' },
-    keyring  => '/usr/share/keyrings/ubuntu-archive-2018.asc',
+    keyring  => '/etc/apt/keyrings/ubuntu-archive-2018.asc',
     include  => { 'src' => false },
   }
 }
