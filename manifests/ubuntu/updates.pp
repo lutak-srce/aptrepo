@@ -10,7 +10,7 @@ class aptrepo::ubuntu::updates (){
   include apt
 
   apt::source { 'updates':
-    location => 'http://ubuntu.com',
+    location => 'http://nova.clouds.archive.ubuntu.com/ubuntu/',
     release  => "${facts['os']['distro']['codename']}-updates",
     repos    => 'main restricted',
     key      => {
